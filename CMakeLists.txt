@@ -6,16 +6,38 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 编译选项
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+if(MSVC)
+    # Windows MSVC 编译选项
+    add_compile_options(/W3 /utf-8)
+else()
+    # Linux/GCC 编译选项
+    add_compile_options(-Wall -Wextra)
+    set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
+    set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+endif()
 
-# SDL2 依赖
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(SDL2 REQUIRED sdl2)
-pkg_check_modules(SDL2_IMAGE REQUIRED SDL2_image)
-pkg_check_modules(SDL2_TTF REQUIRED SDL2_ttf)
-pkg_check_modules(SDL2_MIXER REQUIRED SDL2_mixer)
+# 查找 SDL2 依赖
+# 在 Windows 上使用 vcpkg，在 Linux 上使用 pkg-config
+if(WIN32)
+    # Windows: 使用 vcpkg 提供的 CMake 配置
+    find_package(SDL2 REQUIRED)
+    find_package(SDL2_image REQUIRED)
+    find_package(SDL2_ttf REQUIRED)
+    find_package(SDL2_mixer REQUIRED)
+    
+    # 设置 SDL2 库变量（vcpkg 方式）
+    set(SDL2_LIBRARIES SDL2::SDL2 SDL2::SDL2main)
+    set(SDL2_IMAGE_LIBRARIES SDL2_image::SDL2_image)
+    set(SDL2_TTF_LIBRARIES SDL2_ttf::SDL2_ttf)
+    set(SDL2_MIXER_LIBRARIES SDL2_mixer::SDL2_mixer)
+else()
+    # Linux: 使用 pkg-config
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(SDL2 REQUIRED sdl2)
+    pkg_check_modules(SDL2_IMAGE REQUIRED SDL2_image)
+    pkg_check_modules(SDL2_TTF REQUIRED SDL2_ttf)
+    pkg_check_modules(SDL2_MIXER REQUIRED SDL2_mixer)
+endif()
 
 # 源文件
 set(SOURCES
@@ -55,10 +77,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/external
-    ${SDL2_INCLUDE_DIRS}
-    ${SDL2_IMAGE_INCLUDE_DIRS}
-    ${SDL2_TTF_INCLUDE_DIRS}
-    ${SDL2_MIXER_INCLUDE_DIRS}
 )
 
 # 链接库
@@ -68,6 +86,20 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${SDL2_TTF_LIBRARIES}
     ${SDL2_MIXER_LIBRARIES}
 )
+
+# Windows 特定设置
+if(WIN32)
+    # 设置为 Windows 应用程序（有控制台窗口）
+    # 如果想隐藏控制台窗口，使用 WIN32：
+    # add_executable(${PROJECT_NAME} WIN32 ${SOURCES})
+    
+    # 复制 DLL 文件到输出目录
+    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${CMAKE_SOURCE_DIR}/assets"
+        "$<TARGET_FILE_DIR:${PROJECT_NAME}>/assets"
+    )
+endif()
 
 # 资源目录（如果存在）
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/assets")
