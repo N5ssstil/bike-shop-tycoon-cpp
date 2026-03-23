@@ -40,6 +40,9 @@ set(SOURCES
     src/ui/HUD.cpp
     src/ui/ShopPanel.cpp
     src/ui/BottomNav.cpp
+    src/ui/InventoryPanel.cpp
+    src/ui/RepairPanel.cpp
+    src/ui/MainMenu.cpp
 )
 
 # 可执行文件

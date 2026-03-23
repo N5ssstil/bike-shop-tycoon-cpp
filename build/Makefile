@@ -438,6 +438,78 @@ src/ui/HUD.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.s
 .PHONY : src/ui/HUD.cpp.s
 
+src/ui/InventoryPanel.o: src/ui/InventoryPanel.cpp.o
+.PHONY : src/ui/InventoryPanel.o
+
+# target to build an object file
+src/ui/InventoryPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/InventoryPanel.cpp.o
+.PHONY : src/ui/InventoryPanel.cpp.o
+
+src/ui/InventoryPanel.i: src/ui/InventoryPanel.cpp.i
+.PHONY : src/ui/InventoryPanel.i
+
+# target to preprocess a source file
+src/ui/InventoryPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/InventoryPanel.cpp.i
+.PHONY : src/ui/InventoryPanel.cpp.i
+
+src/ui/InventoryPanel.s: src/ui/InventoryPanel.cpp.s
+.PHONY : src/ui/InventoryPanel.s
+
+# target to generate assembly for a file
+src/ui/InventoryPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/InventoryPanel.cpp.s
+.PHONY : src/ui/InventoryPanel.cpp.s
+
+src/ui/MainMenu.o: src/ui/MainMenu.cpp.o
+.PHONY : src/ui/MainMenu.o
+
+# target to build an object file
+src/ui/MainMenu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.o
+.PHONY : src/ui/MainMenu.cpp.o
+
+src/ui/MainMenu.i: src/ui/MainMenu.cpp.i
+.PHONY : src/ui/MainMenu.i
+
+# target to preprocess a source file
+src/ui/MainMenu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.i
+.PHONY : src/ui/MainMenu.cpp.i
+
+src/ui/MainMenu.s: src/ui/MainMenu.cpp.s
+.PHONY : src/ui/MainMenu.s
+
+# target to generate assembly for a file
+src/ui/MainMenu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.s
+.PHONY : src/ui/MainMenu.cpp.s
+
+src/ui/RepairPanel.o: src/ui/RepairPanel.cpp.o
+.PHONY : src/ui/RepairPanel.o
+
+# target to build an object file
+src/ui/RepairPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.o
+.PHONY : src/ui/RepairPanel.cpp.o
+
+src/ui/RepairPanel.i: src/ui/RepairPanel.cpp.i
+.PHONY : src/ui/RepairPanel.i
+
+# target to preprocess a source file
+src/ui/RepairPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.i
+.PHONY : src/ui/RepairPanel.cpp.i
+
+src/ui/RepairPanel.s: src/ui/RepairPanel.cpp.s
+.PHONY : src/ui/RepairPanel.s
+
+# target to generate assembly for a file
+src/ui/RepairPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.s
+.PHONY : src/ui/RepairPanel.cpp.s
+
 src/ui/ShopPanel.o: src/ui/ShopPanel.cpp.o
 .PHONY : src/ui/ShopPanel.o
 
@@ -532,6 +604,15 @@ help:
 	@echo "... src/ui/HUD.o"
 	@echo "... src/ui/HUD.i"
 	@echo "... src/ui/HUD.s"
+	@echo "... src/ui/InventoryPanel.o"
+	@echo "... src/ui/InventoryPanel.i"
+	@echo "... src/ui/InventoryPanel.s"
+	@echo "... src/ui/MainMenu.o"
+	@echo "... src/ui/MainMenu.i"
+	@echo "... src/ui/MainMenu.s"
+	@echo "... src/ui/RepairPanel.o"
+	@echo "... src/ui/RepairPanel.i"
+	@echo "... src/ui/RepairPanel.s"
 	@echo "... src/ui/ShopPanel.o"
 	@echo "... src/ui/ShopPanel.i"
 	@echo "... src/ui/ShopPanel.s"

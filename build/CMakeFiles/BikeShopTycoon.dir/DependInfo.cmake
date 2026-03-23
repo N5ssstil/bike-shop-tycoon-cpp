@@ -19,6 +19,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/RepairService.cpp" "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o.d"
   "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/BottomNav.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o.d"
   "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/HUD.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o.d"
+  "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/InventoryPanel.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/InventoryPanel.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/InventoryPanel.cpp.o.d"
+  "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/MainMenu.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.o.d"
+  "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/RepairPanel.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.o.d"
   "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o.d"
   "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp" "CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o" "gcc" "CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o.d"
   )

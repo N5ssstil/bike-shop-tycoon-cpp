@@ -105,7 +105,7 @@ public:
     void RemoveChild(const std::string& name);
     void SetBackgroundColor(const SDL_Color& color);
     
-private:
+protected:
     std::vector<std::shared_ptr<UIElement>> children_;
     SDL_Color bgColor_ = {30, 30, 35, 240};
 };
