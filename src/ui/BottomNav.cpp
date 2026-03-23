@@ -8,6 +8,7 @@ BottomNav::BottomNav(TTF_Font* font)
     : UIPanel("BottomNav")
     , font_(font)
 {
+    // 底部导航栏位置
     SetPosition(0, 1020);
     SetSize(1920, 60);
     SetBackgroundColor({20, 20, 25, 250});
@@ -18,11 +19,17 @@ BottomNav::BottomNav(TTF_Font* font)
 BottomNav::~BottomNav() = default;
 
 void BottomNav::CreateButtons() {
+    int btnWidth = 120;
+    int btnHeight = 40;
+    int startX = 200;
+    int y = 10;
+    int spacing = 150;
+    
     // 库存按钮
     inventoryBtn_ = std::make_shared<UIButton>("InventoryBtn", font_);
-    inventoryBtn_->SetPosition(710, 8);
-    inventoryBtn_->SetSize(100, 44);
-    inventoryBtn_->SetText("📦");
+    inventoryBtn_->SetPosition(startX, y);
+    inventoryBtn_->SetSize(btnWidth, btnHeight);
+    inventoryBtn_->SetText(u8"📦 库存");
     inventoryBtn_->SetOnClick([this]() {
         if (onNavClick_) onNavClick_("inventory");
     });
@@ -30,9 +37,9 @@ void BottomNav::CreateButtons() {
     
     // 维修按钮
     repairBtn_ = std::make_shared<UIButton>("RepairBtn", font_);
-    repairBtn_->SetPosition(830, 8);
-    repairBtn_->SetSize(100, 44);
-    repairBtn_->SetText("🔧");
+    repairBtn_->SetPosition(startX + spacing, y);
+    repairBtn_->SetSize(btnWidth, btnHeight);
+    repairBtn_->SetText(u8"🔧 维修");
     repairBtn_->SetOnClick([this]() {
         if (onNavClick_) onNavClick_("repair");
     });
@@ -40,9 +47,9 @@ void BottomNav::CreateButtons() {
     
     // 保存按钮
     saveBtn_ = std::make_shared<UIButton>("SaveBtn", font_);
-    saveBtn_->SetPosition(950, 8);
-    saveBtn_->SetSize(100, 44);
-    saveBtn_->SetText("💾");
+    saveBtn_->SetPosition(startX + spacing * 2, y);
+    saveBtn_->SetSize(btnWidth, btnHeight);
+    saveBtn_->SetText(u8"💾 保存");
     saveBtn_->SetOnClick([this]() {
         if (onNavClick_) onNavClick_("save");
     });
@@ -50,15 +57,31 @@ void BottomNav::CreateButtons() {
     
     // 暂停按钮
     pauseBtn_ = std::make_shared<UIButton>("PauseBtn", font_);
-    pauseBtn_->SetPosition(1070, 8);
-    pauseBtn_->SetSize(100, 44);
-    pauseBtn_->SetText("⏸️");
+    pauseBtn_->SetPosition(startX + spacing * 3, y);
+    pauseBtn_->SetSize(btnWidth, btnHeight);
+    pauseBtn_->SetText(u8"⏸ 暂停");
     pauseBtn_->SetOnClick([this]() {
         auto& tm = TimeManager::Instance();
         tm.SetPaused(!tm.IsRunning());
+        // 更新按钮文字
+        if (tm.IsRunning()) {
+            pauseBtn_->SetText(u8"⏸ 暂停");
+        } else {
+            pauseBtn_->SetText(u8"▶ 继续");
+        }
         if (onNavClick_) onNavClick_("pause");
     });
     AddChild(pauseBtn_);
+    
+    // 帮助按钮
+    auto helpBtn = std::make_shared<UIButton>("HelpBtn", font_);
+    helpBtn->SetPosition(startX + spacing * 4, y);
+    helpBtn->SetSize(btnWidth, btnHeight);
+    helpBtn->SetText(u8"❓ 帮助");
+    helpBtn->SetOnClick([this]() {
+        if (onNavClick_) onNavClick_("help");
+    });
+    AddChild(helpBtn);
 }
 
 } // namespace BikeShopTycoon

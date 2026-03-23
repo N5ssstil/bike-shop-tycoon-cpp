@@ -257,6 +257,7 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/TimeManager.h \
  /usr/include/c++/10/chrono /usr/include/c++/10/ratio \
  /usr/include/c++/10/ctime /usr/include/c++/10/bits/parse_numbers.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/BottomNav.h \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
  /usr/include/c++/10/random /usr/include/c++/10/bits/random.h \
  /usr/include/c++/10/x86_64-redhat-linux/bits/opt_random.h \

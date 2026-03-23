@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "ui/UIManager.h"
 #include "ui/HUD.h"
+#include "ui/BottomNav.h"
 #include "systems/CustomerManager.h"
 #include "systems/InventoryManager.h"
 #include "core/TimeManager.h"
@@ -126,6 +127,21 @@ bool Game::InitSystems() {
     hud_ = std::make_shared<HUD>(font_);
     hud_->Update(playerData_);
     UIManager::Instance().AddPanel(hud_);
+    
+    // 创建底部导航
+    bottomNav_ = std::make_shared<BottomNav>(font_);
+    bottomNav_->SetOnNavClick([this](const std::string& action) {
+        if (action == "inventory") {
+            std::cout << "打开库存界面" << std::endl;
+        } else if (action == "repair") {
+            std::cout << "打开维修界面" << std::endl;
+        } else if (action == "save") {
+            std::cout << "保存游戏" << std::endl;
+        } else if (action == "pause") {
+            std::cout << "暂停/继续游戏" << std::endl;
+        }
+    });
+    UIManager::Instance().AddPanel(bottomNav_);
     
     // 创建顾客管理器
     customerManager_ = std::make_unique<CustomerManager>(playerData_);

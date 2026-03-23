@@ -22,14 +22,14 @@ void InventoryPanel::CreateUI() {
     // 标题
     titleLabel_ = std::make_shared<UILabel>("Title", font_);
     titleLabel_->SetPosition(660, 20);
-    titleLabel_->SetText("📦 库存管理");
+    titleLabel_->SetText(u8"📦 库存管理");
     titleLabel_->SetColor({255, 255, 255, 255});
     AddChild(titleLabel_);
     
     // 统计信息
     statsLabel_ = std::make_shared<UILabel>("Stats", font_);
     statsLabel_->SetPosition(50, 700);
-    statsLabel_->SetText("容量: 0/50 | 总价值: ¥0");
+    statsLabel_->SetText(u8"容量: 0/50 | 总价值: ¥0");
     statsLabel_->SetColor({180, 180, 190, 255});
     AddChild(statsLabel_);
     
@@ -37,7 +37,7 @@ void InventoryPanel::CreateUI() {
     purchaseBtn_ = std::make_shared<UIButton>("PurchaseBtn", font_);
     purchaseBtn_->SetPosition(1300, 700);
     purchaseBtn_->SetSize(120, 44);
-    purchaseBtn_->SetText("进货");
+    purchaseBtn_->SetText(u8"进货");
     purchaseBtn_->SetOnClick([this]() {
         purchaseMode_ = !purchaseMode_;
         purchaseList_.clear();
@@ -49,7 +49,7 @@ void InventoryPanel::CreateUI() {
     closeBtn_ = std::make_shared<UIButton>("CloseBtn", font_);
     closeBtn_->SetPosition(1400, 20);
     closeBtn_->SetSize(80, 40);
-    closeBtn_->SetText("关闭");
+    closeBtn_->SetText(u8"关闭");
     closeBtn_->SetOnClick([this]() {
         SetVisible(false);
     });
@@ -107,7 +107,7 @@ void InventoryPanel::RenderInventoryList(SDL_Renderer* renderer, int startY) {
     SDL_Color green = {100, 200, 100, 255};
     
     // 表头
-    SDL_Surface* surface = TTF_RenderText_Blended(font_, "商品名称                    数量    进价    售价", gray);
+    SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, u8"商品名称                    数量    进价    售价", gray);
     if (surface) {
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_Rect dest = {50, startY, surface->w, surface->h};
@@ -125,7 +125,7 @@ void InventoryPanel::RenderInventoryList(SDL_Renderer* renderer, int startY) {
     for (const auto& item : inventory.items) {
         // 名称
         std::string line = item.itemData.name;
-        surface = TTF_RenderText_Blended(font_, line.c_str(), white);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), white);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {50, y, surface->w, surface->h};
@@ -136,7 +136,7 @@ void InventoryPanel::RenderInventoryList(SDL_Renderer* renderer, int startY) {
         
         // 数量
         line = "x" + std::to_string(item.quantity);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), white);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), white);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {500, y, surface->w, surface->h};
@@ -146,8 +146,8 @@ void InventoryPanel::RenderInventoryList(SDL_Renderer* renderer, int startY) {
         }
         
         // 进价
-        line = "¥" + std::to_string(item.purchasePrice);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), gray);
+        line = u8"¥" + std::to_string(item.purchasePrice);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), gray);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {650, y, surface->w, surface->h};
@@ -157,8 +157,8 @@ void InventoryPanel::RenderInventoryList(SDL_Renderer* renderer, int startY) {
         }
         
         // 售价
-        line = "¥" + std::to_string(item.itemData.sellPrice);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), green);
+        line = u8"¥" + std::to_string(item.itemData.sellPrice);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), green);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {850, y, surface->w, surface->h};
@@ -181,7 +181,7 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
     SDL_Color yellow = {230, 180, 50, 255};
     
     // 标题
-    SDL_Surface* surface = TTF_RenderText_Blended(font_, "选择商品进货 (点击+/-调整数量)", yellow);
+    SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, u8"选择商品进货 (点击+/-调整数量)", yellow);
     if (surface) {
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_Rect dest = {50, startY, surface->w, surface->h};
@@ -191,7 +191,7 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
     }
     
     // 表头
-    surface = TTF_RenderText_Blended(font_, "商品名称                    进价    售价    数量", gray);
+    surface = TTF_RenderUTF8_Blended(font_, u8"商品名称                    进价    售价    数量", gray);
     if (surface) {
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_Rect dest = {50, startY + 40, surface->w, surface->h};
@@ -209,7 +209,7 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
     for (const auto& product : products) {
         // 名称
         std::string line = product.name;
-        surface = TTF_RenderText_Blended(font_, line.c_str(), white);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), white);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {50, y, surface->w, surface->h};
@@ -219,8 +219,8 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
         }
         
         // 进价
-        line = "¥" + std::to_string(product.purchasePrice);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), gray);
+        line = u8"¥" + std::to_string(product.purchasePrice);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), gray);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {500, y, surface->w, surface->h};
@@ -230,8 +230,8 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
         }
         
         // 售价
-        line = "¥" + std::to_string(product.sellPrice);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), green);
+        line = u8"¥" + std::to_string(product.sellPrice);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), green);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {650, y, surface->w, surface->h};
@@ -246,7 +246,7 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
         int qty = it != purchaseList_.end() ? it->quantity : 0;
         
         line = std::to_string(qty);
-        surface = TTF_RenderText_Blended(font_, line.c_str(), white);
+        surface = TTF_RenderUTF8_Blended(font_, line.c_str(), white);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
             SDL_Rect dest = {850, y, surface->w, surface->h};
@@ -261,8 +261,8 @@ void InventoryPanel::RenderPurchaseList(SDL_Renderer* renderer, int startY) {
     
     // 总价
     std::ostringstream oss;
-    oss << "进货总价: ¥" << totalPurchaseCost_;
-    surface = TTF_RenderText_Blended(font_, oss.str().c_str(), yellow);
+    oss << u8"进货总价: ¥" << totalPurchaseCost_;
+    surface = TTF_RenderUTF8_Blended(font_, oss.str().c_str(), yellow);
     if (surface) {
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_Rect dest = {1100, 700, surface->w, surface->h};

@@ -12,6 +12,7 @@ namespace BikeShopTycoon {
 // 前向声明
 class UIManager;
 class HUD;
+class BottomNav;
 class CustomerManager;
 class InventoryManager;
 class TimeManager;
@@ -75,6 +76,7 @@ private:
     
     // 系统指针
     std::shared_ptr<HUD> hud_;
+    std::shared_ptr<BottomNav> bottomNav_;
     std::unique_ptr<CustomerManager> customerManager_;
 };
 
