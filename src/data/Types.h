@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 #include <cstdint>
 
 namespace BikeShopTycoon {
@@ -176,6 +177,16 @@ struct InventoryItem {
 };
 
 /**
+ * 事件选择
+ */
+struct EventChoice {
+    std::string text;
+    int32_t moneyChange = 0;
+    int32_t reputationChange = 0;
+    std::string unlockBrand;
+};
+
+/**
  * 事件数据
  */
 struct GameEvent {
@@ -186,13 +197,7 @@ struct GameEvent {
     int32_t minDay = 1;
     int32_t minReputation = 0;
     int32_t maxReputation = 0;
-};
-
-struct EventChoice {
-    std::string text;
-    int32_t moneyChange = 0;
-    int32_t reputationChange = 0;
-    std::string unlockBrand;
+    std::vector<EventChoice> choices;
 };
 
 } // namespace BikeShopTycoon

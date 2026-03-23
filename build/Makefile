@@ -270,6 +270,102 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/systems/CustomerManager.o: src/systems/CustomerManager.cpp.o
+.PHONY : src/systems/CustomerManager.o
+
+# target to build an object file
+src/systems/CustomerManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o
+.PHONY : src/systems/CustomerManager.cpp.o
+
+src/systems/CustomerManager.i: src/systems/CustomerManager.cpp.i
+.PHONY : src/systems/CustomerManager.i
+
+# target to preprocess a source file
+src/systems/CustomerManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.i
+.PHONY : src/systems/CustomerManager.cpp.i
+
+src/systems/CustomerManager.s: src/systems/CustomerManager.cpp.s
+.PHONY : src/systems/CustomerManager.s
+
+# target to generate assembly for a file
+src/systems/CustomerManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.s
+.PHONY : src/systems/CustomerManager.cpp.s
+
+src/systems/EventSystem.o: src/systems/EventSystem.cpp.o
+.PHONY : src/systems/EventSystem.o
+
+# target to build an object file
+src/systems/EventSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o
+.PHONY : src/systems/EventSystem.cpp.o
+
+src/systems/EventSystem.i: src/systems/EventSystem.cpp.i
+.PHONY : src/systems/EventSystem.i
+
+# target to preprocess a source file
+src/systems/EventSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.i
+.PHONY : src/systems/EventSystem.cpp.i
+
+src/systems/EventSystem.s: src/systems/EventSystem.cpp.s
+.PHONY : src/systems/EventSystem.s
+
+# target to generate assembly for a file
+src/systems/EventSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.s
+.PHONY : src/systems/EventSystem.cpp.s
+
+src/systems/InventoryManager.o: src/systems/InventoryManager.cpp.o
+.PHONY : src/systems/InventoryManager.o
+
+# target to build an object file
+src/systems/InventoryManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o
+.PHONY : src/systems/InventoryManager.cpp.o
+
+src/systems/InventoryManager.i: src/systems/InventoryManager.cpp.i
+.PHONY : src/systems/InventoryManager.i
+
+# target to preprocess a source file
+src/systems/InventoryManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.i
+.PHONY : src/systems/InventoryManager.cpp.i
+
+src/systems/InventoryManager.s: src/systems/InventoryManager.cpp.s
+.PHONY : src/systems/InventoryManager.s
+
+# target to generate assembly for a file
+src/systems/InventoryManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.s
+.PHONY : src/systems/InventoryManager.cpp.s
+
+src/systems/RepairService.o: src/systems/RepairService.cpp.o
+.PHONY : src/systems/RepairService.o
+
+# target to build an object file
+src/systems/RepairService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o
+.PHONY : src/systems/RepairService.cpp.o
+
+src/systems/RepairService.i: src/systems/RepairService.cpp.i
+.PHONY : src/systems/RepairService.i
+
+# target to preprocess a source file
+src/systems/RepairService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.i
+.PHONY : src/systems/RepairService.cpp.i
+
+src/systems/RepairService.s: src/systems/RepairService.cpp.s
+.PHONY : src/systems/RepairService.s
+
+# target to generate assembly for a file
+src/systems/RepairService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.s
+.PHONY : src/systems/RepairService.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,6 +391,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/systems/CustomerManager.o"
+	@echo "... src/systems/CustomerManager.i"
+	@echo "... src/systems/CustomerManager.s"
+	@echo "... src/systems/EventSystem.o"
+	@echo "... src/systems/EventSystem.i"
+	@echo "... src/systems/EventSystem.s"
+	@echo "... src/systems/InventoryManager.o"
+	@echo "... src/systems/InventoryManager.i"
+	@echo "... src/systems/InventoryManager.s"
+	@echo "... src/systems/RepairService.o"
+	@echo "... src/systems/RepairService.i"
+	@echo "... src/systems/RepairService.s"
 .PHONY : help
 
 

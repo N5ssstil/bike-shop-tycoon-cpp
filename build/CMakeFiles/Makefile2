@@ -81,12 +81,12 @@ clean: CMakeFiles/BikeShopTycoon.dir/clean
 CMakeFiles/BikeShopTycoon.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target BikeShopTycoon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target BikeShopTycoon"
 .PHONY : CMakeFiles/BikeShopTycoon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BikeShopTycoon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BikeShopTycoon.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/BikeShopTycoon.dir/rule

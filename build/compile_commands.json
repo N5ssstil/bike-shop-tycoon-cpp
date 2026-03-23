@@ -22,5 +22,29 @@
   "command": "/usr/bin/c++  -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16  -Wall -Wextra -std=gnu++17 -o CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/TimeManager.cpp",
   "file": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/TimeManager.cpp",
   "output": "CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.o"
+},
+{
+  "directory": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build",
+  "command": "/usr/bin/c++  -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16  -Wall -Wextra -std=gnu++17 -o CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/CustomerManager.cpp",
+  "file": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/CustomerManager.cpp",
+  "output": "CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o"
+},
+{
+  "directory": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build",
+  "command": "/usr/bin/c++  -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16  -Wall -Wextra -std=gnu++17 -o CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/InventoryManager.cpp",
+  "file": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/InventoryManager.cpp",
+  "output": "CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o"
+},
+{
+  "directory": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build",
+  "command": "/usr/bin/c++  -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16  -Wall -Wextra -std=gnu++17 -o CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/RepairService.cpp",
+  "file": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/RepairService.cpp",
+  "output": "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o"
+},
+{
+  "directory": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build",
+  "command": "/usr/bin/c++  -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16  -Wall -Wextra -std=gnu++17 -o CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/EventSystem.cpp",
+  "file": "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/EventSystem.cpp",
+  "output": "CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o"
 }
 ]

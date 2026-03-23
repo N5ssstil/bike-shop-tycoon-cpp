@@ -25,6 +25,12 @@ set(SOURCES
     src/core/Game.cpp
     src/core/SaveSystem.cpp
     src/core/TimeManager.cpp
+    
+    # Systems
+    src/systems/CustomerManager.cpp
+    src/systems/InventoryManager.cpp
+    src/systems/RepairService.cpp
+    src/systems/EventSystem.cpp
 )
 
 # 可执行文件
