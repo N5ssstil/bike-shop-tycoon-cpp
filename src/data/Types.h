@@ -21,6 +21,11 @@ struct PlayerData {
     bool hasWorkshop = false;
     bool hasCustomStudio = false;
     
+    // 解锁状态
+    std::vector<std::string> unlockedBrands;
+    std::vector<std::string> unlockedItems;
+    std::vector<std::string> completedMilestones;
+    
     // 存档信息
     int32_t saveVersion = 1;
     std::string lastSaveTime;

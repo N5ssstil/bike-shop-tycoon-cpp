@@ -246,6 +246,30 @@ src/core/TimeManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.s
 .PHONY : src/core/TimeManager.cpp.s
 
+src/data/ProductDatabase.o: src/data/ProductDatabase.cpp.o
+.PHONY : src/data/ProductDatabase.o
+
+# target to build an object file
+src/data/ProductDatabase.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.o
+.PHONY : src/data/ProductDatabase.cpp.o
+
+src/data/ProductDatabase.i: src/data/ProductDatabase.cpp.i
+.PHONY : src/data/ProductDatabase.i
+
+# target to preprocess a source file
+src/data/ProductDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.i
+.PHONY : src/data/ProductDatabase.cpp.i
+
+src/data/ProductDatabase.s: src/data/ProductDatabase.cpp.s
+.PHONY : src/data/ProductDatabase.s
+
+# target to generate assembly for a file
+src/data/ProductDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.s
+.PHONY : src/data/ProductDatabase.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -484,6 +508,9 @@ help:
 	@echo "... src/core/TimeManager.o"
 	@echo "... src/core/TimeManager.i"
 	@echo "... src/core/TimeManager.s"
+	@echo "... src/data/ProductDatabase.o"
+	@echo "... src/data/ProductDatabase.i"
+	@echo "... src/data/ProductDatabase.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

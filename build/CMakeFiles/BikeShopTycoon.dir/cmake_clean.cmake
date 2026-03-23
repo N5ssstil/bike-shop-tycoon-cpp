@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BikeShopTycoon.dir/src/core/SaveSystem.cpp.o.d"
   "CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.o"
   "CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.o.d"
+  "CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.o"
+  "CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.o.d"
   "CMakeFiles/BikeShopTycoon.dir/src/main.cpp.o"
   "CMakeFiles/BikeShopTycoon.dir/src/main.cpp.o.d"
   "CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o"

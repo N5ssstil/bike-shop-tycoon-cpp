@@ -26,6 +26,9 @@ set(SOURCES
     src/core/SaveSystem.cpp
     src/core/TimeManager.cpp
     
+    # Data
+    src/data/ProductDatabase.cpp
+    
     # Systems
     src/systems/CustomerManager.cpp
     src/systems/InventoryManager.cpp
