@@ -13,6 +13,7 @@ namespace BikeShopTycoon {
 class UIManager;
 class HUD;
 class BottomNav;
+class CustomerDetailPanel;
 class CustomerManager;
 class InventoryManager;
 class TimeManager;
@@ -45,6 +46,7 @@ public:
     
     // 系统访问
     CustomerManager& GetCustomerManager() { return *customerManager_; }
+    CustomerDetailPanel& GetCustomerDetailPanel() { return *customerDetailPanel_; }
     
 private:
     Game() = default;
@@ -61,6 +63,7 @@ private:
     bool InitSystems();
     void RenderShopScene();
     void RenderCustomers();
+    void SaveGame();
     
     SDL_Window* window_ = nullptr;
     SDL_Renderer* renderer_ = nullptr;
@@ -77,7 +80,11 @@ private:
     // 系统指针
     std::shared_ptr<HUD> hud_;
     std::shared_ptr<BottomNav> bottomNav_;
+    std::shared_ptr<CustomerDetailPanel> customerDetailPanel_;
     std::unique_ptr<CustomerManager> customerManager_;
+    
+    // 顾客卡片点击区域（用于检测点击）
+    std::vector<SDL_Rect> customerCardRects_;
 };
 
 } // namespace BikeShopTycoon

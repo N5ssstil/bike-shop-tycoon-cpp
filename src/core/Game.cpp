@@ -2,11 +2,14 @@
 #include "ui/UIManager.h"
 #include "ui/HUD.h"
 #include "ui/BottomNav.h"
+#include "ui/CustomerDetailPanel.h"
 #include "systems/CustomerManager.h"
 #include "systems/InventoryManager.h"
 #include "core/TimeManager.h"
+#include "core/SaveSystem.h"
 #include <iostream>
 #include <chrono>
+#include <algorithm>
 
 namespace BikeShopTycoon {
 
@@ -133,15 +136,40 @@ bool Game::InitSystems() {
     bottomNav_->SetOnNavClick([this](const std::string& action) {
         if (action == "inventory") {
             std::cout << "打开库存界面" << std::endl;
+            // TODO: 显示库存面板
         } else if (action == "repair") {
             std::cout << "打开维修界面" << std::endl;
+            // TODO: 显示维修面板
         } else if (action == "save") {
-            std::cout << "保存游戏" << std::endl;
+            SaveGame();
         } else if (action == "pause") {
             std::cout << "暂停/继续游戏" << std::endl;
         }
     });
     UIManager::Instance().AddPanel(bottomNav_);
+    
+    // 创建顾客详情面板
+    customerDetailPanel_ = std::make_shared<CustomerDetailPanel>(font_);
+    customerDetailPanel_->SetOnAction([this](const std::string& action, const Customer& customer) {
+        if (action == "sell") {
+            std::cout << "推荐商品给: " << customer.name << std::endl;
+            // TODO: 显示商品选择面板
+        } else if (action == "repair") {
+            std::cout << "提供维修服务给: " << customer.name << std::endl;
+            // TODO: 显示维修面板
+        } else if (action == "dismiss") {
+            std::cout << "送客: " << customer.name << std::endl;
+            if (customerManager_) {
+                auto& customers = customerManager_->GetActiveCustomers();
+                auto it = std::find_if(customers.begin(), customers.end(),
+                    [&](const Customer& c) { return c.id == customer.id; });
+                if (it != customers.end()) {
+                    customerManager_->CustomerLeaveUnsatisfied(*it);
+                }
+            }
+        }
+    });
+    UIManager::Instance().AddPanel(customerDetailPanel_);
     
     // 创建顾客管理器
     customerManager_ = std::make_unique<CustomerManager>(playerData_);
@@ -197,11 +225,39 @@ void Game::HandleEvents() {
                 
             case SDL_KEYDOWN:
                 if (event.key.keysym.sym == SDLK_ESCAPE) {
-                    running_ = false;
+                    if (customerDetailPanel_ && customerDetailPanel_->IsVisible()) {
+                        customerDetailPanel_->SetVisible(false);
+                    } else {
+                        running_ = false;
+                    }
                 }
                 break;
                 
             case SDL_MOUSEBUTTONDOWN:
+                if (event.button.button == SDL_BUTTON_LEFT) {
+                    // 检查是否点击了顾客卡片
+                    if (customerManager_ && customerDetailPanel_) {
+                        int mouseX = event.button.x;
+                        int mouseY = event.button.y;
+                        
+                        for (size_t i = 0; i < customerCardRects_.size() && i < customerManager_->GetActiveCustomerCount(); ++i) {
+                            const SDL_Rect& rect = customerCardRects_[i];
+                            if (mouseX >= rect.x && mouseX <= rect.x + rect.w &&
+                                mouseY >= rect.y && mouseY <= rect.y + rect.h) {
+                                // 点击了顾客卡片
+                                Customer* customer = customerManager_->GetCustomerByIndex(i);
+                                if (customer) {
+                                    customerDetailPanel_->ShowCustomer(*customer);
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+                // 传递给 UI 系统处理
+                UIManager::Instance().HandleEvent(event);
+                break;
+                
             case SDL_MOUSEBUTTONUP:
             case SDL_MOUSEMOTION:
                 // 传递给 UI 系统处理
@@ -303,6 +359,9 @@ void Game::RenderCustomers() {
     const auto& customers = customerManager_->GetActiveCustomers();
     int customerIndex = 0;
     
+    // 清空并重新计算顾客卡片位置
+    customerCardRects_.clear();
+    
     for (const auto& customer : customers) {
         // 计算顾客位置（横向排列）
         int customerWidth = 200;
@@ -313,6 +372,9 @@ void Game::RenderCustomers() {
         
         int x = startX + customerIndex * spacing;
         int y = startY;
+        
+        // 保存卡片位置用于点击检测
+        customerCardRects_.push_back({x, y, customerWidth, customerHeight});
         
         // 绘制顾客背景框
         SDL_SetRenderDrawColor(renderer_, 50, 50, 55, 255);
@@ -424,6 +486,9 @@ void Game::RenderCustomers() {
 }
 
 void Game::CleanUp() {
+    // 清理顾客详情面板
+    customerDetailPanel_.reset();
+    
     // 清理顾客管理器
     customerManager_.reset();
     
@@ -455,6 +520,11 @@ void Game::CleanUp() {
     
     SDL_Quit();
     std::cout << "游戏已退出" << std::endl;
+}
+
+void Game::SaveGame() {
+    SaveSystem::Instance().SaveGame(playerData_);
+    std::cout << "游戏已保存!" << std::endl;
 }
 
 } // namespace BikeShopTycoon

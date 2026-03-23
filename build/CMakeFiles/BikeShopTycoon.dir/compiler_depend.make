@@ -575,6 +575,8 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: /home/admin/.openclaw/workspa
   /usr/include/c++/10/ratio \
   /usr/include/c++/10/ctime \
   /usr/include/c++/10/bits/parse_numbers.h \
+  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/BottomNav.h \
+  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/CustomerDetailPanel.h \
   /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
   /usr/include/c++/10/random \
   /usr/include/c++/10/bits/random.h \
@@ -584,6 +586,7 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: /home/admin/.openclaw/workspa
   /usr/include/c++/10/bits/stl_numeric.h \
   /usr/include/c++/10/pstl/glue_numeric_defs.h \
   /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
+  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.h \
   /usr/include/c++/10/iostream \
   /usr/include/c++/10/ostream \
   /usr/include/c++/10/ios \
@@ -607,7 +610,9 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: /home/admin/.openclaw/workspa
   /usr/include/c++/10/bits/basic_ios.tcc \
   /usr/include/c++/10/bits/ostream.tcc \
   /usr/include/c++/10/istream \
-  /usr/include/c++/10/bits/istream.tcc
+  /usr/include/c++/10/bits/istream.tcc \
+  /usr/include/c++/10/algorithm \
+  /usr/include/c++/10/pstl/glue_algorithm_defs.h
 
 CMakeFiles/BikeShopTycoon.dir/src/core/SaveSystem.cpp.o: /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.cpp \
   /usr/include/stdc-predef.h \
@@ -5406,8 +5411,6 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: /home/admin/.openclaw/work
 
 /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/AchievementSystem.h:
 
-/usr/include/c++/10/algorithm:
-
 /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/ProductDatabase.h:
 
 /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/ProductDatabase.cpp:
@@ -5424,9 +5427,9 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: /home/admin/.openclaw/work
 
 /usr/include/c++/10/x86_64-redhat-linux/bits/basic_file.h:
 
-/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.h:
-
 /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.cpp:
+
+/usr/include/c++/10/algorithm:
 
 /usr/include/c++/10/bits/istream.tcc:
 
@@ -5461,6 +5464,8 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: /home/admin/.openclaw/work
 /usr/include/c++/10/bits/quoted_string.h:
 
 /usr/include/c++/10/iostream:
+
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.h:
 
 /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h:
 
