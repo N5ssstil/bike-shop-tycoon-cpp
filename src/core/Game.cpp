@@ -64,15 +64,42 @@ bool Game::Init(const std::string& title, int width, int height) {
         return false;
     }
     
-    // 加载字体
-    font_ = TTF_OpenFont("assets/fonts/arial.ttf", 24);
-    fontLarge_ = TTF_OpenFont("assets/fonts/arial_bold.ttf", 36);
+    // 加载字体 - 优先使用支持中文的字体
+    // Windows: 使用微软雅黑
+    // Linux: 使用 DejaVuSans（不支持中文，需要另外配置）
     
+#ifdef _WIN32
+    // Windows 系统字体路径
+    const char* chineseFont = "C:/Windows/Fonts/msyh.ttc";  // 微软雅黑
+    const char* fallbackFont = "C:/Windows/Fonts/arial.ttf";
+#else
+    // Linux 系统字体路径
+    const char* chineseFont = "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf";
+    const char* fallbackFont = "/usr/share/fonts/dejavu/DejaVuSans.ttf";
+#endif
+    
+    // 先尝试加载中文字体
+    font_ = TTF_OpenFont(chineseFont, 24);
+    fontLarge_ = TTF_OpenFont(chineseFont, 36);
+    
+    // 如果中文字体加载失败，尝试 assets 目录的字体
+    if (!font_) {
+        font_ = TTF_OpenFont("assets/fonts/arial.ttf", 24);
+        fontLarge_ = TTF_OpenFont("assets/fonts/arial_bold.ttf", 36);
+    }
+    
+    // 最后尝试备用字体
     if (!font_) {
         std::cerr << "警告: 字体加载失败: " << TTF_GetError() << std::endl;
         std::cerr << "尝试使用系统字体..." << std::endl;
-        font_ = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans.ttf", 24);
-        fontLarge_ = TTF_OpenFont("/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf", 36);
+        font_ = TTF_OpenFont(fallbackFont, 24);
+        fontLarge_ = TTF_OpenFont(fallbackFont, 36);
+    }
+    
+    if (font_) {
+        std::cout << "字体加载成功!" << std::endl;
+    } else {
+        std::cerr << "错误: 无法加载任何字体!" << std::endl;
     }
     
     std::cout << "=== Bike Shop Tycoon ===" << std::endl;
