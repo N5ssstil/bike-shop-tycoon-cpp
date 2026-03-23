@@ -1,7 +1,7 @@
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/BikeShopTycoon.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/edit_cache.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/rebuild_cache.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/list_install_components.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/install.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/install/local.dir
-/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles/install/strip.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/BikeShopTycoon.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/edit_cache.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/rebuild_cache.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/list_install_components.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/install.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/install/local.dir
+/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles/install/strip.dir

@@ -1,4 +1,4 @@
-# Install script for directory: /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp
+# Install script for directory: /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/BikeShopTycoon"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/BikeShopTycoon")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/BikeShopTycoon")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/BikeShopTycoon" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/BikeShopTycoon")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -59,7 +59,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/BikeShopTycoon/assets" TYPE DIRECTORY FILES "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/assets/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/BikeShopTycoon/assets" TYPE DIRECTORY FILES "/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/assets/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -70,5 +70,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

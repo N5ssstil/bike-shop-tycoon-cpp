@@ -1,8 +1,8 @@
 CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/MainMenu.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/MainMenu.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/MainMenu.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/MainMenu.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -252,6 +252,7 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/MainMenu.cpp.o: \
  /usr/include/c++/10/bits/algorithmfwd.h \
  /usr/include/c++/10/bits/stl_heap.h \
  /usr/include/c++/10/bits/uniform_int_dist.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/SaveSystem.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/Game.h \
- /usr/include/SDL2/SDL_image.h
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/Game.h \
+ /usr/include/SDL2/SDL_image.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h

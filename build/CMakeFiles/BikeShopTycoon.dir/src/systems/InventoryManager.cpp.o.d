@@ -1,8 +1,8 @@
 CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/InventoryManager.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/Types.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
  /usr/include/c++/10/string \
  /usr/include/c++/10/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/c++/10/x86_64-redhat-linux/bits/os_defines.h \

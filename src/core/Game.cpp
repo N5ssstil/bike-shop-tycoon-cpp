@@ -127,6 +127,14 @@ bool Game::InitSystems() {
     hud_->Update(playerData_);
     UIManager::Instance().AddPanel(hud_);
     
+    // 创建顾客管理器
+    customerManager_ = std::make_unique<CustomerManager>(playerData_);
+    
+    // 设置顾客进店回调
+    customerManager_->SetOnCustomerEnter([this](const Customer& customer) {
+        std::cout << "顾客进店: " << customer.name << std::endl;
+    });
+    
     std::cout << "游戏系统初始化完成!" << std::endl;
     return true;
 }
@@ -197,6 +205,11 @@ void Game::Update(float deltaTime) {
         std::cout << "进入第 " << playerData_.day << " 天" << std::endl;
     }
     
+    // 更新顾客管理器
+    if (customerManager_) {
+        customerManager_->Update(deltaTime);
+    }
+    
     // 更新 HUD
     hud_->Update(playerData_);
 }
@@ -208,6 +221,9 @@ void Game::Render() {
     
     // 渲染主内容区域（店铺场景）
     RenderShopScene();
+    
+    // 渲染顾客
+    RenderCustomers();
     
     // 渲染 UI
     UIManager::Instance().Render();
@@ -265,7 +281,136 @@ void Game::RenderShopScene() {
     }
 }
 
+void Game::RenderCustomers() {
+    if (!customerManager_) return;
+    
+    const auto& customers = customerManager_->GetActiveCustomers();
+    int customerIndex = 0;
+    
+    for (const auto& customer : customers) {
+        // 计算顾客位置（横向排列）
+        int customerWidth = 200;
+        int customerHeight = 280;
+        int startX = 100;
+        int startY = 250;
+        int spacing = 220;
+        
+        int x = startX + customerIndex * spacing;
+        int y = startY;
+        
+        // 绘制顾客背景框
+        SDL_SetRenderDrawColor(renderer_, 50, 50, 55, 255);
+        SDL_Rect customerBg = {x, y, customerWidth, customerHeight};
+        SDL_RenderFillRect(renderer_, &customerBg);
+        
+        // 绘制边框
+        SDL_SetRenderDrawColor(renderer_, 80, 80, 90, 255);
+        SDL_RenderDrawRect(renderer_, &customerBg);
+        
+        // 绘制顾客图标（简单的圆形代表头像）
+        SDL_SetRenderDrawColor(renderer_, 150, 150, 160, 255);
+        int centerX = x + customerWidth / 2;
+        int centerY = y + 60;
+        // 用矩形简化（SDL2 没有直接画圆的函数）
+        SDL_Rect headRect = {centerX - 30, centerY - 30, 60, 60};
+        SDL_RenderFillRect(renderer_, &headRect);
+        
+        // 显示顾客名字
+        if (font_) {
+            SDL_Color nameColor = {220, 220, 230, 255};
+            SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, customer.name.c_str(), nameColor);
+            if (surface) {
+                SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+                SDL_Rect dest = {x + (customerWidth - surface->w) / 2, y + 100, surface->w, surface->h};
+                SDL_RenderCopy(renderer_, texture, nullptr, &dest);
+                SDL_DestroyTexture(texture);
+                SDL_FreeSurface(surface);
+            }
+        }
+        
+        // 显示顾客类型
+        std::string typeStr;
+        switch (customer.type) {
+            case CustomerType::Student: typeStr = u8"学生"; break;
+            case CustomerType::Commuter: typeStr = u8"通勤族"; break;
+            case CustomerType::CyclingEnthusiast: typeStr = u8"骑行爱好者"; break;
+            case CustomerType::Racer: typeStr = u8"车手"; break;
+            case CustomerType::Influencer: typeStr = u8"网红"; break;
+        }
+        
+        if (font_) {
+            SDL_Color typeColor = {180, 180, 200, 255};
+            SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, typeStr.c_str(), typeColor);
+            if (surface) {
+                SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+                SDL_Rect dest = {x + (customerWidth - surface->w) / 2, y + 130, surface->w, surface->h};
+                SDL_RenderCopy(renderer_, texture, nullptr, &dest);
+                SDL_DestroyTexture(texture);
+                SDL_FreeSurface(surface);
+            }
+        }
+        
+        // 显示预算
+        if (font_) {
+            SDL_Color budgetColor = {100, 200, 100, 255};
+            std::string budgetStr = u8"预算: ¥" + std::to_string(customer.budget);
+            SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, budgetStr.c_str(), budgetColor);
+            if (surface) {
+                SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+                SDL_Rect dest = {x + (customerWidth - surface->w) / 2, y + 160, surface->w, surface->h};
+                SDL_RenderCopy(renderer_, texture, nullptr, &dest);
+                SDL_DestroyTexture(texture);
+                SDL_FreeSurface(surface);
+            }
+        }
+        
+        // 显示耐心条
+        int patienceBarWidth = customerWidth - 20;
+        int patienceBarHeight = 10;
+        int patienceBarX = x + 10;
+        int patienceBarY = y + 200;
+        
+        // 背景
+        SDL_SetRenderDrawColor(renderer_, 40, 40, 45, 255);
+        SDL_Rect patienceBg = {patienceBarX, patienceBarY, patienceBarWidth, patienceBarHeight};
+        SDL_RenderFillRect(renderer_, &patienceBg);
+        
+        // 进度
+        float patiencePercent = customer.patience / 100.0f;
+        SDL_Color patienceColor;
+        if (patiencePercent > 0.6f) {
+            patienceColor = {100, 200, 100, 255}; // 绿色
+        } else if (patiencePercent > 0.3f) {
+            patienceColor = {230, 180, 50, 255}; // 黄色
+        } else {
+            patienceColor = {200, 80, 80, 255}; // 红色
+        }
+        SDL_SetRenderDrawColor(renderer_, patienceColor.r, patienceColor.g, patienceColor.b, patienceColor.a);
+        SDL_Rect patienceFill = {patienceBarX, patienceBarY, 
+                                 static_cast<int>(patienceBarWidth * patiencePercent), patienceBarHeight};
+        SDL_RenderFillRect(renderer_, &patienceFill);
+        
+        // 显示"点击接待"提示
+        if (font_) {
+            SDL_Color hintColor = {120, 120, 140, 255};
+            SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, u8"点击接待", hintColor);
+            if (surface) {
+                SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+                SDL_Rect dest = {x + (customerWidth - surface->w) / 2, y + 230, surface->w, surface->h};
+                SDL_RenderCopy(renderer_, texture, nullptr, &dest);
+                SDL_DestroyTexture(texture);
+                SDL_FreeSurface(surface);
+            }
+        }
+        
+        customerIndex++;
+    }
+}
+
 void Game::CleanUp() {
+    // 清理顾客管理器
+    customerManager_.reset();
+    
     // 清理 UI
     UIManager::Instance().Shutdown();
     

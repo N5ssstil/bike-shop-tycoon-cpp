@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/external -I/usr/include/SDL2 -I/usr/include/harfbuzz -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/freetype2 -I/usr/include/libpng16
+CXX_INCLUDES = -I/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src -I/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/external
 
-CXX_FLAGS =  -Wall -Wextra -std=gnu++17
+CXX_FLAGS = -std=gnu++17 -Wall -Wextra
 

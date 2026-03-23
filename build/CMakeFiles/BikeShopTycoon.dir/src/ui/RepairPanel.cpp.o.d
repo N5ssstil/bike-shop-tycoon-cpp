@@ -1,8 +1,8 @@
 CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/RepairPanel.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/RepairPanel.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/RepairPanel.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/RepairPanel.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -252,8 +252,8 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/RepairPanel.cpp.o: \
  /usr/include/c++/10/bits/algorithmfwd.h \
  /usr/include/c++/10/bits/stl_heap.h \
  /usr/include/c++/10/bits/uniform_int_dist.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/RepairService.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/Types.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/RepairService.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
  /usr/include/c++/10/sstream /usr/include/c++/10/istream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \

@@ -1,8 +1,8 @@
 CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/ShopPanel.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -252,8 +252,8 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: \
  /usr/include/c++/10/bits/algorithmfwd.h \
  /usr/include/c++/10/bits/stl_heap.h \
  /usr/include/c++/10/bits/uniform_int_dist.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/Types.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
  /usr/include/c++/10/random /usr/include/c++/10/bits/random.h \
  /usr/include/c++/10/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/10/bits/random.tcc /usr/include/c++/10/numeric \
@@ -261,4 +261,4 @@ CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: \
  /usr/include/c++/10/pstl/glue_numeric_defs.h /usr/include/c++/10/chrono \
  /usr/include/c++/10/ratio /usr/include/c++/10/ctime \
  /usr/include/c++/10/bits/parse_numbers.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/InventoryManager.h
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h

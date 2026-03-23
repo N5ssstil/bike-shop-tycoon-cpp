@@ -9,6 +9,44 @@ CustomerManager::CustomerManager(PlayerData& playerData, const CustomerGenerator
     , random_(std::random_device{}())
 {
     LoadStories();
+    
+    // 初始化第一次生成时间
+    std::uniform_real_distribution<float> dist(settings_.minSpawnInterval, settings_.maxSpawnInterval);
+    nextSpawnTime_ = dist(random_);
+}
+
+void CustomerManager::Update(float deltaTime) {
+    // 更新生成计时器
+    spawnTimer_ += deltaTime;
+    
+    // 检查是否需要生成新顾客
+    if (spawnTimer_ >= nextSpawnTime_ && GetActiveCustomerCount() < settings_.maxConcurrentCustomers) {
+        GenerateCustomer();
+        spawnTimer_ = 0.0f;
+        
+        // 设置下一次生成时间
+        std::uniform_real_distribution<float> dist(settings_.minSpawnInterval, settings_.maxSpawnInterval);
+        nextSpawnTime_ = dist(random_);
+    }
+    
+    // 更新顾客状态（耐心值等）
+    for (auto& customer : activeCustomers_) {
+        if (customer.patience > 0) {
+            customer.patience -= static_cast<int>(deltaTime * 2); // 每秒减少2点耐心
+        }
+        
+        // 耐心耗尽则离开
+        if (customer.patience <= 0 && customer.state != CustomerState::Leaving) {
+            customer.state = CustomerState::Leaving;
+        }
+    }
+}
+
+Customer* CustomerManager::GetCustomerByIndex(int index) {
+    if (index >= 0 && index < static_cast<int>(activeCustomers_.size())) {
+        return &activeCustomers_[index];
+    }
+    return nullptr;
 }
 
 Customer CustomerManager::GenerateCustomer() {

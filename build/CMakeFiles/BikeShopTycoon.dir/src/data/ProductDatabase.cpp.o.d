@@ -1,8 +1,8 @@
 CMakeFiles/BikeShopTycoon.dir/src/data/ProductDatabase.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/ProductDatabase.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/ProductDatabase.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/ProductDatabase.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/data/Types.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/ProductDatabase.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
  /usr/include/c++/10/string \
  /usr/include/c++/10/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/c++/10/x86_64-redhat-linux/bits/os_defines.h \

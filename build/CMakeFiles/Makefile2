@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp
+CMAKE_SOURCE_DIR = /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build
+CMAKE_BINARY_DIR = /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/BikeShopTycoon.dir/clean
 CMakeFiles/BikeShopTycoon.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target BikeShopTycoon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target BikeShopTycoon"
 .PHONY : CMakeFiles/BikeShopTycoon.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BikeShopTycoon.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/BikeShopTycoon.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/build/CMakeFiles 0
 .PHONY : CMakeFiles/BikeShopTycoon.dir/rule
 
 # Convenience name for target.

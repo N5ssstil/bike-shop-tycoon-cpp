@@ -44,12 +44,19 @@ public:
     
     CustomerManager(PlayerData& playerData, const CustomerGeneratorSettings& settings = {});
     
+    // 更新（每帧调用）
+    void Update(float deltaTime);
+    
     // 生成顾客
     Customer GenerateCustomer();
     
     // 获取活跃顾客
     const std::vector<Customer>& GetActiveCustomers() const { return activeCustomers_; }
+    std::vector<Customer>& GetActiveCustomers() { return activeCustomers_; }
     int GetActiveCustomerCount() const { return static_cast<int>(activeCustomers_.size()); }
+    
+    // 根据索引获取顾客
+    Customer* GetCustomerByIndex(int index);
     
     // 交互
     void InteractWithCustomer(Customer& customer, const std::string& dialogueChoice);
@@ -77,6 +84,9 @@ private:
     std::vector<Customer> activeCustomers_;
     std::vector<CustomerStory> storyDatabase_;
     std::mt19937 random_;
+    
+    float spawnTimer_ = 0.0f;
+    float nextSpawnTime_ = 0.0f;
     
     CustomerCallback onCustomerEnter_;
     CustomerCallback onCustomerLeave_;

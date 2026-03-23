@@ -1,7 +1,7 @@
 CMakeFiles/BikeShopTycoon.dir/src/core/TimeManager.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/TimeManager.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/TimeManager.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/TimeManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/TimeManager.h \
  /usr/include/c++/10/chrono /usr/include/c++/10/ratio \
  /usr/include/c++/10/type_traits \
  /usr/include/c++/10/x86_64-redhat-linux/bits/c++config.h \

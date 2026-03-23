@@ -1,7 +1,7 @@
 CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/Game.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/Game.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/Game.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/Game.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -237,9 +237,35 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: \
  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
  /usr/include/asm-generic/errno-base.h /usr/include/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
- /usr/include/c++/10/bits/basic_string.tcc /usr/include/c++/10/iostream \
- /usr/include/c++/10/ostream /usr/include/c++/10/ios \
- /usr/include/c++/10/bits/ios_base.h \
+ /usr/include/c++/10/bits/basic_string.tcc \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
+ /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_vector.h \
+ /usr/include/c++/10/bits/stl_bvector.h \
+ /usr/include/c++/10/bits/vector.tcc \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.h \
+ /usr/include/c++/10/functional /usr/include/c++/10/bits/std_function.h \
+ /usr/include/c++/10/unordered_map /usr/include/c++/10/bits/hashtable.h \
+ /usr/include/c++/10/bits/hashtable_policy.h \
+ /usr/include/c++/10/bits/node_handle.h /usr/include/c++/10/optional \
+ /usr/include/c++/10/bits/enable_special_members.h \
+ /usr/include/c++/10/bits/unordered_map.h \
+ /usr/include/c++/10/bits/erase_if.h /usr/include/c++/10/bits/stl_algo.h \
+ /usr/include/c++/10/bits/algorithmfwd.h \
+ /usr/include/c++/10/bits/stl_heap.h \
+ /usr/include/c++/10/bits/uniform_int_dist.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/HUD.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/TimeManager.h \
+ /usr/include/c++/10/chrono /usr/include/c++/10/ratio \
+ /usr/include/c++/10/ctime /usr/include/c++/10/bits/parse_numbers.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
+ /usr/include/c++/10/random /usr/include/c++/10/bits/random.h \
+ /usr/include/c++/10/x86_64-redhat-linux/bits/opt_random.h \
+ /usr/include/c++/10/bits/random.tcc /usr/include/c++/10/numeric \
+ /usr/include/c++/10/bits/stl_numeric.h \
+ /usr/include/c++/10/pstl/glue_numeric_defs.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
+ /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
+ /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
  /usr/include/c++/10/bits/locale_classes.tcc \
  /usr/include/c++/10/system_error \
@@ -255,6 +281,4 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: \
  /usr/include/c++/10/bits/locale_facets.tcc \
  /usr/include/c++/10/bits/basic_ios.tcc \
  /usr/include/c++/10/bits/ostream.tcc /usr/include/c++/10/istream \
- /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/chrono \
- /usr/include/c++/10/ratio /usr/include/c++/10/ctime \
- /usr/include/c++/10/bits/parse_numbers.h
+ /usr/include/c++/10/bits/istream.tcc

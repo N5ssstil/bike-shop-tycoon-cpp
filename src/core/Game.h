@@ -28,6 +28,7 @@ public:
     SDL_Renderer* GetRenderer() const { return renderer_; }
     SDL_Window* GetWindow() const { return window_; }
     TTF_Font* GetFont() const { return font_; }
+    TTF_Font* GetFontLarge() const { return fontLarge_; }
     
     // 游戏状态
     bool IsRunning() const { return running_; }
@@ -40,6 +41,9 @@ public:
     // 玩家数据
     PlayerData& GetPlayerData() { return playerData_; }
     const PlayerData& GetPlayerData() const { return playerData_; }
+    
+    // 系统访问
+    CustomerManager& GetCustomerManager() { return *customerManager_; }
     
 private:
     Game() = default;
@@ -55,6 +59,7 @@ private:
     void CleanUp();
     bool InitSystems();
     void RenderShopScene();
+    void RenderCustomers();
     
     SDL_Window* window_ = nullptr;
     SDL_Renderer* renderer_ = nullptr;
@@ -70,6 +75,7 @@ private:
     
     // 系统指针
     std::shared_ptr<HUD> hud_;
+    std::unique_ptr<CustomerManager> customerManager_;
 };
 
 } // namespace BikeShopTycoon

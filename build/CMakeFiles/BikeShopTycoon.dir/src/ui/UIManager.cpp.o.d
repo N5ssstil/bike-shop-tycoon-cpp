@@ -1,7 +1,7 @@
 CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/UIManager.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \

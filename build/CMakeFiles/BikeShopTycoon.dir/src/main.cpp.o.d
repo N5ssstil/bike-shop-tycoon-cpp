@@ -1,7 +1,7 @@
 CMakeFiles/BikeShopTycoon.dir/src/main.cpp.o: \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/main.cpp \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/core/Game.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/Game.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
@@ -237,7 +237,11 @@ CMakeFiles/BikeShopTycoon.dir/src/main.cpp.o: \
  /usr/include/asm/errno.h /usr/include/asm-generic/errno.h \
  /usr/include/asm-generic/errno-base.h /usr/include/bits/types/error_t.h \
  /usr/include/c++/10/bits/charconv.h \
- /usr/include/c++/10/bits/basic_string.tcc /usr/include/c++/10/iostream \
+ /usr/include/c++/10/bits/basic_string.tcc \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/Types.h \
+ /usr/include/c++/10/vector /usr/include/c++/10/bits/stl_vector.h \
+ /usr/include/c++/10/bits/stl_bvector.h \
+ /usr/include/c++/10/bits/vector.tcc /usr/include/c++/10/iostream \
  /usr/include/c++/10/ostream /usr/include/c++/10/ios \
  /usr/include/c++/10/bits/ios_base.h \
  /usr/include/c++/10/bits/locale_classes.h \
