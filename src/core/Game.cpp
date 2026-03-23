@@ -3,10 +3,12 @@
 #include "ui/HUD.h"
 #include "ui/BottomNav.h"
 #include "ui/CustomerDetailPanel.h"
+#include "ui/InventoryPanel.h"
 #include "systems/CustomerManager.h"
 #include "systems/InventoryManager.h"
 #include "core/TimeManager.h"
 #include "core/SaveSystem.h"
+#include "data/ProductDatabase.h"
 #include <iostream>
 #include <chrono>
 #include <algorithm>
@@ -120,11 +122,17 @@ bool Game::Init(const std::string& title, int width, int height) {
 }
 
 bool Game::InitSystems() {
+    // 初始化商品数据库
+    ProductDatabase::Instance().Initialize();
+    
     // 初始化 UI 管理器
     if (!UIManager::Instance().Init(renderer_, font_)) {
         std::cerr << "UI 管理器初始化失败!" << std::endl;
         return false;
     }
+    
+    // 创建库存管理器
+    inventoryManager_ = std::make_unique<InventoryManager>(playerData_);
     
     // 创建 HUD
     hud_ = std::make_shared<HUD>(font_);
@@ -135,8 +143,12 @@ bool Game::InitSystems() {
     bottomNav_ = std::make_shared<BottomNav>(font_);
     bottomNav_->SetOnNavClick([this](const std::string& action) {
         if (action == "inventory") {
-            std::cout << "打开库存界面" << std::endl;
-            // TODO: 显示库存面板
+            if (inventoryPanel_) {
+                inventoryPanel_->SetVisible(!inventoryPanel_->IsVisible());
+                if (inventoryPanel_->IsVisible()) {
+                    inventoryPanel_->RefreshInventory();
+                }
+            }
         } else if (action == "repair") {
             std::cout << "打开维修界面" << std::endl;
             // TODO: 显示维修面板
@@ -147,6 +159,11 @@ bool Game::InitSystems() {
         }
     });
     UIManager::Instance().AddPanel(bottomNav_);
+    
+    // 创建库存面板
+    inventoryPanel_ = std::make_shared<InventoryPanel>(font_, *inventoryManager_);
+    inventoryPanel_->SetVisible(false);
+    UIManager::Instance().AddPanel(inventoryPanel_);
     
     // 创建顾客详情面板
     customerDetailPanel_ = std::make_shared<CustomerDetailPanel>(font_);
@@ -486,8 +503,14 @@ void Game::RenderCustomers() {
 }
 
 void Game::CleanUp() {
+    // 清理库存面板
+    inventoryPanel_.reset();
+    
     // 清理顾客详情面板
     customerDetailPanel_.reset();
+    
+    // 清理库存管理器
+    inventoryManager_.reset();
     
     // 清理顾客管理器
     customerManager_.reset();

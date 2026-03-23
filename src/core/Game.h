@@ -14,6 +14,7 @@ class UIManager;
 class HUD;
 class BottomNav;
 class CustomerDetailPanel;
+class InventoryPanel;
 class CustomerManager;
 class InventoryManager;
 class TimeManager;
@@ -47,6 +48,7 @@ public:
     // 系统访问
     CustomerManager& GetCustomerManager() { return *customerManager_; }
     CustomerDetailPanel& GetCustomerDetailPanel() { return *customerDetailPanel_; }
+    InventoryManager& GetInventoryManager() { return *inventoryManager_; }
     
 private:
     Game() = default;
@@ -81,7 +83,9 @@ private:
     std::shared_ptr<HUD> hud_;
     std::shared_ptr<BottomNav> bottomNav_;
     std::shared_ptr<CustomerDetailPanel> customerDetailPanel_;
+    std::shared_ptr<InventoryPanel> inventoryPanel_;
     std::unique_ptr<CustomerManager> customerManager_;
+    std::unique_ptr<InventoryManager> inventoryManager_;
     
     // 顾客卡片点击区域（用于检测点击）
     std::vector<SDL_Rect> customerCardRects_;

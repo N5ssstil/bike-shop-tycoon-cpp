@@ -259,13 +259,15 @@ CMakeFiles/BikeShopTycoon.dir/src/core/Game.cpp.o: \
  /usr/include/c++/10/ctime /usr/include/c++/10/bits/parse_numbers.h \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/BottomNav.h \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/CustomerDetailPanel.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/ui/InventoryPanel.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
+ /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/data/ProductDatabase.h \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/CustomerManager.h \
  /usr/include/c++/10/random /usr/include/c++/10/bits/random.h \
  /usr/include/c++/10/x86_64-redhat-linux/bits/opt_random.h \
  /usr/include/c++/10/bits/random.tcc /usr/include/c++/10/numeric \
  /usr/include/c++/10/bits/stl_numeric.h \
  /usr/include/c++/10/pstl/glue_numeric_defs.h \
- /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/systems/InventoryManager.h \
  /home/admin/.openclaw/workspace/bike-shop-tycoon-cpp/src/core/SaveSystem.h \
  /usr/include/c++/10/iostream /usr/include/c++/10/ostream \
  /usr/include/c++/10/ios /usr/include/c++/10/bits/ios_base.h \
