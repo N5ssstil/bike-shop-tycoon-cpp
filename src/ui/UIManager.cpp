@@ -40,7 +40,14 @@ UILabel::~UILabel() {
 }
 
 void UILabel::Render(SDL_Renderer* renderer) {
-    if (!visible_ || !texture_) return;
+    if (!visible_) return;
+    
+    // 如果纹理需要更新，先更新
+    if (!texture_ && !text_.empty() && font_) {
+        UpdateTexture(renderer);
+    }
+    
+    if (!texture_) return;
     
     SDL_RenderCopy(renderer, texture_, nullptr, &rect_);
 }
