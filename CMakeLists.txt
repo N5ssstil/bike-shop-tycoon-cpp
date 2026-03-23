@@ -31,6 +31,12 @@ set(SOURCES
     src/systems/InventoryManager.cpp
     src/systems/RepairService.cpp
     src/systems/EventSystem.cpp
+    
+    # UI
+    src/ui/UIManager.cpp
+    src/ui/HUD.cpp
+    src/ui/ShopPanel.cpp
+    src/ui/BottomNav.cpp
 )
 
 # 可执行文件

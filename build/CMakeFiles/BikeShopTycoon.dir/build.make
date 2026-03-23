@@ -181,6 +181,62 @@ CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/systems/EventSystem.cpp -o CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.s
 
+CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: CMakeFiles/BikeShopTycoon.dir/flags.make
+CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp
+CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o: CMakeFiles/BikeShopTycoon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o -MF CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o.d -o CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp > CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.i
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/UIManager.cpp -o CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.s
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o: CMakeFiles/BikeShopTycoon.dir/flags.make
+CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o: /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/HUD.cpp
+CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o: CMakeFiles/BikeShopTycoon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o -MF CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o.d -o CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/HUD.cpp
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/HUD.cpp > CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.i
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/HUD.cpp -o CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.s
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: CMakeFiles/BikeShopTycoon.dir/flags.make
+CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp
+CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o: CMakeFiles/BikeShopTycoon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o -MF CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o.d -o CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp > CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.i
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/ShopPanel.cpp -o CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.s
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o: CMakeFiles/BikeShopTycoon.dir/flags.make
+CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o: /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/BottomNav.cpp
+CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o: CMakeFiles/BikeShopTycoon.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o -MF CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o.d -o CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o -c /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/BottomNav.cpp
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/BottomNav.cpp > CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.i
+
+CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/src/ui/BottomNav.cpp -o CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.s
+
 # Object files for target BikeShopTycoon
 BikeShopTycoon_OBJECTS = \
 "CMakeFiles/BikeShopTycoon.dir/src/main.cpp.o" \
@@ -190,7 +246,11 @@ BikeShopTycoon_OBJECTS = \
 "CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o" \
 "CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o" \
 "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o" \
-"CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o"
+"CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o" \
+"CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o" \
+"CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o" \
+"CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o" \
+"CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o"
 
 # External object files for target BikeShopTycoon
 BikeShopTycoon_EXTERNAL_OBJECTS =
@@ -203,9 +263,13 @@ BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/systems/CustomerManager.cpp.o
 BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o
 BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o
 BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/systems/EventSystem.cpp.o
+BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o
+BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o
+BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o
+BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o
 BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/build.make
 BikeShopTycoon: CMakeFiles/BikeShopTycoon.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable BikeShopTycoon"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/admin/.openclaw/workspace/projects/bike-shop-tycoon-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable BikeShopTycoon"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BikeShopTycoon.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

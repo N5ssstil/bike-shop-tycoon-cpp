@@ -366,6 +366,102 @@ src/systems/RepairService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.s
 .PHONY : src/systems/RepairService.cpp.s
 
+src/ui/BottomNav.o: src/ui/BottomNav.cpp.o
+.PHONY : src/ui/BottomNav.o
+
+# target to build an object file
+src/ui/BottomNav.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o
+.PHONY : src/ui/BottomNav.cpp.o
+
+src/ui/BottomNav.i: src/ui/BottomNav.cpp.i
+.PHONY : src/ui/BottomNav.i
+
+# target to preprocess a source file
+src/ui/BottomNav.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.i
+.PHONY : src/ui/BottomNav.cpp.i
+
+src/ui/BottomNav.s: src/ui/BottomNav.cpp.s
+.PHONY : src/ui/BottomNav.s
+
+# target to generate assembly for a file
+src/ui/BottomNav.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.s
+.PHONY : src/ui/BottomNav.cpp.s
+
+src/ui/HUD.o: src/ui/HUD.cpp.o
+.PHONY : src/ui/HUD.o
+
+# target to build an object file
+src/ui/HUD.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o
+.PHONY : src/ui/HUD.cpp.o
+
+src/ui/HUD.i: src/ui/HUD.cpp.i
+.PHONY : src/ui/HUD.i
+
+# target to preprocess a source file
+src/ui/HUD.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.i
+.PHONY : src/ui/HUD.cpp.i
+
+src/ui/HUD.s: src/ui/HUD.cpp.s
+.PHONY : src/ui/HUD.s
+
+# target to generate assembly for a file
+src/ui/HUD.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.s
+.PHONY : src/ui/HUD.cpp.s
+
+src/ui/ShopPanel.o: src/ui/ShopPanel.cpp.o
+.PHONY : src/ui/ShopPanel.o
+
+# target to build an object file
+src/ui/ShopPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o
+.PHONY : src/ui/ShopPanel.cpp.o
+
+src/ui/ShopPanel.i: src/ui/ShopPanel.cpp.i
+.PHONY : src/ui/ShopPanel.i
+
+# target to preprocess a source file
+src/ui/ShopPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.i
+.PHONY : src/ui/ShopPanel.cpp.i
+
+src/ui/ShopPanel.s: src/ui/ShopPanel.cpp.s
+.PHONY : src/ui/ShopPanel.s
+
+# target to generate assembly for a file
+src/ui/ShopPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.s
+.PHONY : src/ui/ShopPanel.cpp.s
+
+src/ui/UIManager.o: src/ui/UIManager.cpp.o
+.PHONY : src/ui/UIManager.o
+
+# target to build an object file
+src/ui/UIManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o
+.PHONY : src/ui/UIManager.cpp.o
+
+src/ui/UIManager.i: src/ui/UIManager.cpp.i
+.PHONY : src/ui/UIManager.i
+
+# target to preprocess a source file
+src/ui/UIManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.i
+.PHONY : src/ui/UIManager.cpp.i
+
+src/ui/UIManager.s: src/ui/UIManager.cpp.s
+.PHONY : src/ui/UIManager.s
+
+# target to generate assembly for a file
+src/ui/UIManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.s
+.PHONY : src/ui/UIManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -403,6 +499,18 @@ help:
 	@echo "... src/systems/RepairService.o"
 	@echo "... src/systems/RepairService.i"
 	@echo "... src/systems/RepairService.s"
+	@echo "... src/ui/BottomNav.o"
+	@echo "... src/ui/BottomNav.i"
+	@echo "... src/ui/BottomNav.s"
+	@echo "... src/ui/HUD.o"
+	@echo "... src/ui/HUD.i"
+	@echo "... src/ui/HUD.s"
+	@echo "... src/ui/ShopPanel.o"
+	@echo "... src/ui/ShopPanel.i"
+	@echo "... src/ui/ShopPanel.s"
+	@echo "... src/ui/UIManager.o"
+	@echo "... src/ui/UIManager.i"
+	@echo "... src/ui/UIManager.s"
 .PHONY : help
 
 

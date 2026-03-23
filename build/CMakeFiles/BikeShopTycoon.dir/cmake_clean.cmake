@@ -17,6 +17,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/BikeShopTycoon.dir/src/systems/InventoryManager.cpp.o.d"
   "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o"
   "CMakeFiles/BikeShopTycoon.dir/src/systems/RepairService.cpp.o.d"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.o.d"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/HUD.cpp.o.d"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/ShopPanel.cpp.o.d"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o"
+  "CMakeFiles/BikeShopTycoon.dir/src/ui/UIManager.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
