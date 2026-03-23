@@ -71,7 +71,8 @@ void UILabel::UpdateTexture(SDL_Renderer* renderer) {
         return;
     }
     
-    SDL_Surface* surface = TTF_RenderText_Blended(font_, text_.c_str(), color_);
+    // 使用 UTF8 版本渲染中文
+    SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, text_.c_str(), color_);
     if (surface) {
         texture_ = SDL_CreateTextureFromSurface(renderer, surface);
         rect_.w = surface->w;
@@ -178,7 +179,8 @@ void UIButton::UpdateTexture(SDL_Renderer* renderer) {
     }
     
     SDL_Color white = {255, 255, 255, 255};
-    SDL_Surface* surface = TTF_RenderText_Blended(font_, text_.c_str(), white);
+    // 使用 UTF8 版本渲染中文
+    SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, text_.c_str(), white);
     if (surface) {
         texture_ = SDL_CreateTextureFromSurface(renderer, surface);
         SDL_FreeSurface(surface);

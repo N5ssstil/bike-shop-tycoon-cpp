@@ -224,8 +224,9 @@ void Game::RenderShopScene() {
     // 渲染店铺标题
     if (fontLarge_) {
         SDL_Color titleColor = {200, 200, 210, 255};
-        SDL_Surface* surface = TTF_RenderText_Blended(fontLarge_, 
-            "🚴 狗狗自行车店 🚴", titleColor);
+        // 使用 UTF8 版本渲染中文
+        SDL_Surface* surface = TTF_RenderUTF8_Blended(fontLarge_, 
+            u8"狗狗自行车店", titleColor);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
             SDL_Rect dest = {(width_ - surface->w) / 2, 120, surface->w, surface->h};
@@ -238,8 +239,8 @@ void Game::RenderShopScene() {
     // 渲染欢迎文字
     if (font_) {
         SDL_Color textColor = {150, 150, 160, 255};
-        SDL_Surface* surface = TTF_RenderText_Blended(font_, 
-            "欢迎光临！顾客会陆续进店...", textColor);
+        SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, 
+            u8"欢迎光临！顾客会陆续进店...", textColor);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
             SDL_Rect dest = {(width_ - surface->w) / 2, 180, surface->w, surface->h};
@@ -252,8 +253,8 @@ void Game::RenderShopScene() {
     // 渲染底部提示
     if (font_) {
         SDL_Color hintColor = {100, 100, 110, 255};
-        SDL_Surface* surface = TTF_RenderText_Blended(font_, 
-            "按 ESC 退出游戏", hintColor);
+        SDL_Surface* surface = TTF_RenderUTF8_Blended(font_, 
+            u8"按 ESC 退出游戏", hintColor);
         if (surface) {
             SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
             SDL_Rect dest = {20, height_ - 40, surface->w, surface->h};
