@@ -5,8 +5,16 @@
 #include <SDL2/SDL_ttf.h>
 #include <memory>
 #include <string>
+#include "data/Types.h"
 
 namespace BikeShopTycoon {
+
+// 前向声明
+class UIManager;
+class HUD;
+class CustomerManager;
+class InventoryManager;
+class TimeManager;
 
 class Game {
 public:
@@ -19,6 +27,7 @@ public:
     // 渲染器访问
     SDL_Renderer* GetRenderer() const { return renderer_; }
     SDL_Window* GetWindow() const { return window_; }
+    TTF_Font* GetFont() const { return font_; }
     
     // 游戏状态
     bool IsRunning() const { return running_; }
@@ -27,6 +36,10 @@ public:
     // 窗口尺寸
     int GetWidth() const { return width_; }
     int GetHeight() const { return height_; }
+    
+    // 玩家数据
+    PlayerData& GetPlayerData() { return playerData_; }
+    const PlayerData& GetPlayerData() const { return playerData_; }
     
 private:
     Game() = default;
@@ -40,14 +53,23 @@ private:
     void Render();
     
     void CleanUp();
+    bool InitSystems();
+    void RenderShopScene();
     
     SDL_Window* window_ = nullptr;
     SDL_Renderer* renderer_ = nullptr;
     TTF_Font* font_ = nullptr;
+    TTF_Font* fontLarge_ = nullptr;
     
     bool running_ = false;
     int width_ = 1920;
     int height_ = 1080;
+    
+    // 游戏数据
+    PlayerData playerData_;
+    
+    // 系统指针
+    std::shared_ptr<HUD> hud_;
 };
 
 } // namespace BikeShopTycoon

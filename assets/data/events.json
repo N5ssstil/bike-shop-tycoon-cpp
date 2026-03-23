@@ -1,0 +1,217 @@
+{
+  "events": [
+    {
+      "id": "event_rain_001",
+      "title": "暴雨来袭",
+      "description": "连续几天的暴雨天气，街上几乎没有行人。客流大幅下降，但维修需求可能增加。",
+      "minDay": 5,
+      "minReputation": 0,
+      "maxReputation": 100,
+      "choices": [
+        {
+          "text": "推出雨天特价服务",
+          "moneyChange": -200,
+          "reputationChange": 5,
+          "unlockBrand": ""
+        },
+        {
+          "text": "休息一天，整理库存",
+          "moneyChange": 0,
+          "reputationChange": 0,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_influencer_001",
+      "title": "网红探店",
+      "description": "一位拥有10万粉丝的骑行博主来店里探店，这是个提升知名度的好机会！",
+      "minDay": 10,
+      "minReputation": 15,
+      "maxReputation": 50,
+      "choices": [
+        {
+          "text": "热情接待，赠送小礼品",
+          "moneyChange": -100,
+          "reputationChange": 15,
+          "unlockBrand": ""
+        },
+        {
+          "text": "正常接待，保持专业",
+          "moneyChange": 0,
+          "reputationChange": 5,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_supplier_001",
+      "title": "供应商涨价通知",
+      "description": "主要供应商通知，下月起进货价格将上涨10%。你可以选择提前囤货或接受涨价。",
+      "minDay": 15,
+      "minReputation": 10,
+      "maxReputation": 100,
+      "choices": [
+        {
+          "text": "提前囤货（花费3000元）",
+          "moneyChange": -3000,
+          "reputationChange": 0,
+          "unlockBrand": ""
+        },
+        {
+          "text": "接受涨价",
+          "moneyChange": 0,
+          "reputationChange": -5,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_brand_unlock_001",
+      "title": "品牌代理邀请",
+      "description": "闪电（Specialized）品牌发来邀请，你的店铺口碑已经达到他们的代理标准！",
+      "minDay": 20,
+      "minReputation": 45,
+      "maxReputation": 100,
+      "choices": [
+        {
+          "text": "接受代理（需要缴纳保证金10000元）",
+          "moneyChange": -10000,
+          "reputationChange": 20,
+          "unlockBrand": "brand_specialized"
+        },
+        {
+          "text": "暂时婉拒",
+          "moneyChange": 0,
+          "reputationChange": 0,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_race_001",
+      "title": "本地骑行比赛",
+      "description": "周末有本地骑行比赛，很多骑行爱好者会经过你的店。可以借机推广。",
+      "minDay": 7,
+      "minReputation": 10,
+      "maxReputation": 40,
+      "choices": [
+        {
+          "text": "在店门口设置补给站",
+          "moneyChange": -500,
+          "reputationChange": 10,
+          "unlockBrand": ""
+        },
+        {
+          "text": "推出比赛特价商品",
+          "moneyChange": 200,
+          "reputationChange": 5,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_vip_001",
+      "title": "VIP客户来访",
+      "description": "一位富有的骑行爱好者来到店里，他正在寻找高端定制战车。",
+      "minDay": 30,
+      "minReputation": 40,
+      "maxReputation": 100,
+      "choices": [
+        {
+          "text": "推荐顶级配置（高利润）",
+          "moneyChange": 5000,
+          "reputationChange": 5,
+          "unlockBrand": ""
+        },
+        {
+          "text": "推荐性价比方案",
+          "moneyChange": 2000,
+          "reputationChange": 15,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_trek_unlock_001",
+      "title": "崔克品牌邀请",
+      "description": "崔克（Trek）品牌对你店铺的经营能力表示认可，邀请你成为授权经销商！",
+      "minDay": 40,
+      "minReputation": 50,
+      "maxReputation": 100,
+      "choices": [
+        {
+          "text": "接受代理（保证金12000元）",
+          "moneyChange": -12000,
+          "reputationChange": 25,
+          "unlockBrand": "brand_trek"
+        },
+        {
+          "text": "暂时婉拒",
+          "moneyChange": 0,
+          "reputationChange": 0,
+          "unlockBrand": ""
+        }
+      ]
+    },
+    {
+      "id": "event_accident_001",
+      "title": "顾客骑行事故",
+      "description": "一位在你店里买车的顾客在骑行中发生了轻微事故，他怀疑是车辆问题。如何处理？",
+      "minDay": 25,
+      "minReputation": 20,
+      "maxReputation": 60,
+      "choices": [
+        {
+          "text": "免费检查并赔偿部分损失",
+          "moneyChange": -800,
+          "reputationChange": 15,
+          "unlockBrand": ""
+        },
+        {
+          "text": "解释责任不在店铺",
+          "moneyChange": 0,
+          "reputationChange": -10,
+          "unlockBrand": ""
+        }
+      ]
+    }
+  ],
+  "customerStories": [
+    {
+      "id": "story_student_001",
+      "title": "攒钱买车的学生",
+      "description": "一个高中生已经来店里看了好几次车了。他攒了半年的零花钱，想买一辆入门公路车备战校园赛。",
+      "targetCustomerType": "Student",
+      "reputationBonus": 10
+    },
+    {
+      "id": "story_commuter_001",
+      "title": "为孩子换车的父亲",
+      "description": "一位上班族想换一辆通勤车。他说每天骑车接送孩子是他最开心的时光，想换一辆更舒适的车。",
+      "targetCustomerType": "Commuter",
+      "reputationBonus": 8
+    },
+    {
+      "id": "story_enthusiast_001",
+      "title": "周末骑游党",
+      "description": "一位骑行爱好者来店里保养车子。他兴奋地分享着上周的百公里骑游经历，还想约你一起参加周末活动。",
+      "targetCustomerType": "CyclingEnthusiast",
+      "reputationBonus": 12
+    },
+    {
+      "id": "story_racer_001",
+      "title": "业余车手的梦想",
+      "description": "一位业余车手正在备战省级联赛。他需要专业的车辆调校，希望能找到一家靠谱的车店长期合作。",
+      "targetCustomerType": "Racer",
+      "reputationBonus": 20
+    },
+    {
+      "id": "story_influencer_001",
+      "title": "探店博主",
+      "description": "一位骑行博主来店里体验服务。她的视频有上万粉丝观看，是一个宣传的好机会。",
+      "targetCustomerType": "Influencer",
+      "reputationBonus": 15
+    }
+  ]
+}

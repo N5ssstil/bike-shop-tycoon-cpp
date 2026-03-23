@@ -13,7 +13,8 @@ public:
     int GetCurrentDay() const { return currentDay_; }
     float GetDayProgress() const { return dayProgress_; }
     
-bool IsRunning() const { return !isPaused; }
+    bool IsNewDay(); // 检查是否是新的一天（只返回一次true）
+    bool IsRunning() const { return !isPaused; }
     void SetPaused(bool paused) { isPaused = paused; }
     
 private:
@@ -23,6 +24,7 @@ private:
     float dayProgress_ = 0.0f;
     float secondsPerDay_ = 60.0f;
     bool isPaused = false;
+    bool newDayFlag_ = false;
 };
 
 } // namespace BikeShopTycoon
