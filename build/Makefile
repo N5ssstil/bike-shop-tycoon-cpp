@@ -174,6 +174,30 @@ BikeShopTycoon/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/build
 .PHONY : BikeShopTycoon/fast
 
+src/core/AudioManager.o: src/core/AudioManager.cpp.o
+.PHONY : src/core/AudioManager.o
+
+# target to build an object file
+src/core/AudioManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/core/AudioManager.cpp.o
+.PHONY : src/core/AudioManager.cpp.o
+
+src/core/AudioManager.i: src/core/AudioManager.cpp.i
+.PHONY : src/core/AudioManager.i
+
+# target to preprocess a source file
+src/core/AudioManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/core/AudioManager.cpp.i
+.PHONY : src/core/AudioManager.cpp.i
+
+src/core/AudioManager.s: src/core/AudioManager.cpp.s
+.PHONY : src/core/AudioManager.s
+
+# target to generate assembly for a file
+src/core/AudioManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/core/AudioManager.cpp.s
+.PHONY : src/core/AudioManager.cpp.s
+
 src/core/Game.o: src/core/Game.cpp.o
 .PHONY : src/core/Game.o
 
@@ -294,6 +318,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/systems/AchievementSystem.o: src/systems/AchievementSystem.cpp.o
+.PHONY : src/systems/AchievementSystem.o
+
+# target to build an object file
+src/systems/AchievementSystem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/AchievementSystem.cpp.o
+.PHONY : src/systems/AchievementSystem.cpp.o
+
+src/systems/AchievementSystem.i: src/systems/AchievementSystem.cpp.i
+.PHONY : src/systems/AchievementSystem.i
+
+# target to preprocess a source file
+src/systems/AchievementSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/AchievementSystem.cpp.i
+.PHONY : src/systems/AchievementSystem.cpp.i
+
+src/systems/AchievementSystem.s: src/systems/AchievementSystem.cpp.s
+.PHONY : src/systems/AchievementSystem.s
+
+# target to generate assembly for a file
+src/systems/AchievementSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/systems/AchievementSystem.cpp.s
+.PHONY : src/systems/AchievementSystem.cpp.s
+
 src/systems/CustomerManager.o: src/systems/CustomerManager.cpp.o
 .PHONY : src/systems/CustomerManager.o
 
@@ -413,6 +461,30 @@ src/ui/BottomNav.s: src/ui/BottomNav.cpp.s
 src/ui/BottomNav.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/BottomNav.cpp.s
 .PHONY : src/ui/BottomNav.cpp.s
+
+src/ui/CustomerDetailPanel.o: src/ui/CustomerDetailPanel.cpp.o
+.PHONY : src/ui/CustomerDetailPanel.o
+
+# target to build an object file
+src/ui/CustomerDetailPanel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/CustomerDetailPanel.cpp.o
+.PHONY : src/ui/CustomerDetailPanel.cpp.o
+
+src/ui/CustomerDetailPanel.i: src/ui/CustomerDetailPanel.cpp.i
+.PHONY : src/ui/CustomerDetailPanel.i
+
+# target to preprocess a source file
+src/ui/CustomerDetailPanel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/CustomerDetailPanel.cpp.i
+.PHONY : src/ui/CustomerDetailPanel.cpp.i
+
+src/ui/CustomerDetailPanel.s: src/ui/CustomerDetailPanel.cpp.s
+.PHONY : src/ui/CustomerDetailPanel.s
+
+# target to generate assembly for a file
+src/ui/CustomerDetailPanel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BikeShopTycoon.dir/build.make CMakeFiles/BikeShopTycoon.dir/src/ui/CustomerDetailPanel.cpp.s
+.PHONY : src/ui/CustomerDetailPanel.cpp.s
 
 src/ui/HUD.o: src/ui/HUD.cpp.o
 .PHONY : src/ui/HUD.o
@@ -571,6 +643,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... BikeShopTycoon"
+	@echo "... src/core/AudioManager.o"
+	@echo "... src/core/AudioManager.i"
+	@echo "... src/core/AudioManager.s"
 	@echo "... src/core/Game.o"
 	@echo "... src/core/Game.i"
 	@echo "... src/core/Game.s"
@@ -586,6 +661,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/systems/AchievementSystem.o"
+	@echo "... src/systems/AchievementSystem.i"
+	@echo "... src/systems/AchievementSystem.s"
 	@echo "... src/systems/CustomerManager.o"
 	@echo "... src/systems/CustomerManager.i"
 	@echo "... src/systems/CustomerManager.s"
@@ -601,6 +679,9 @@ help:
 	@echo "... src/ui/BottomNav.o"
 	@echo "... src/ui/BottomNav.i"
 	@echo "... src/ui/BottomNav.s"
+	@echo "... src/ui/CustomerDetailPanel.o"
+	@echo "... src/ui/CustomerDetailPanel.i"
+	@echo "... src/ui/CustomerDetailPanel.s"
 	@echo "... src/ui/HUD.o"
 	@echo "... src/ui/HUD.i"
 	@echo "... src/ui/HUD.s"

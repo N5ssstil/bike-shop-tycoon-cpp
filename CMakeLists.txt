@@ -25,6 +25,7 @@ set(SOURCES
     src/core/Game.cpp
     src/core/SaveSystem.cpp
     src/core/TimeManager.cpp
+    src/core/AudioManager.cpp
     
     # Data
     src/data/ProductDatabase.cpp
@@ -34,6 +35,7 @@ set(SOURCES
     src/systems/InventoryManager.cpp
     src/systems/RepairService.cpp
     src/systems/EventSystem.cpp
+    src/systems/AchievementSystem.cpp
     
     # UI
     src/ui/UIManager.cpp
@@ -43,6 +45,7 @@ set(SOURCES
     src/ui/InventoryPanel.cpp
     src/ui/RepairPanel.cpp
     src/ui/MainMenu.cpp
+    src/ui/CustomerDetailPanel.cpp
 )
 
 # 可执行文件
